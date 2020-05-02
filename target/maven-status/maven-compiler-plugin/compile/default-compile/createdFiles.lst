@@ -1,1 +1,8 @@
+pages\BasePage.class
 managers\WebDriverManager$1.class
+pages\LoginPage.class
+managers\WebDriverManager.class
+pages\CartPage.class
+pages\HomePage.class
+managers\PageObjectManager.class
+managers\FileReaderManager.class
