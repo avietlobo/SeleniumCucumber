@@ -1,6 +1,8 @@
-package Steps;
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
+
+import com.cucumber.listener.Reporter;
 
 import cucumber.TestContext;
 import cucumber.api.java.en.Given;
@@ -35,6 +37,8 @@ public class HomePageSteps {
 		 * PageObjectManager(driver); homePage = pageObjectManager.getHomePage();
 		 */
 		 homePage.navigateTo_HomePage(); 
+		 
+		 Reporter.addScenarioLog("Navigated to Home Page");
 			
 	}
 	
@@ -43,6 +47,7 @@ public class HomePageSteps {
 	public void i_click_on_close_popup_window() throws Throwable {
 		
 		 homePage.closePopUpWindow();
+		 Reporter.addScenarioLog("Closed the pop up window");
 	}
 	
 	
@@ -50,6 +55,8 @@ public class HomePageSteps {
 	public void i_click_on_shopping_cart() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		homePage.clickOn_Cart();
+		
+		 Reporter.addScenarioLog("Clicked on cart");
 	}
 	
 }

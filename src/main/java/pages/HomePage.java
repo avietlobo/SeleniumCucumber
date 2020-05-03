@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import com.cucumber.listener.Reporter;
+
+
 public class HomePage{
 
 
@@ -39,6 +42,9 @@ public class HomePage{
     public void navigateTo_HomePage()
     {
     	driver.get("https://www.flipkart.com");
+    	selenium.wait.untilJqueryIsDone(driver);
+    	
+    	 Reporter.addStepLog("Navigated to Home Page from POM");
     	
     }
 	

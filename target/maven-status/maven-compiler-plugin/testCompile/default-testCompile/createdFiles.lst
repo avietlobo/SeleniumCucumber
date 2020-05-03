@@ -1,6 +1,7 @@
+stepDefinitions\Hooks.class
 cucumber\TestContext.class
 NewTest.class
-Steps\Hooks.class
+cucumber\ScenarioContext.class
+stepDefinitions\HomePageSteps.class
+stepDefinitions\CartPageSteps.class
 runner\testRunner.class
-Steps\HomePageSteps.class
-Steps\CartPageSteps.class
