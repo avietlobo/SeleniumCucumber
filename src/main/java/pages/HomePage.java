@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.cucumber.listener.Reporter;
 
+import managers.FileReaderManager;
+
 
 public class HomePage{
 
@@ -41,10 +43,10 @@ public class HomePage{
 
     public void navigateTo_HomePage()
     {
-    	driver.get("https://www.flipkart.com");
+    	driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
     	selenium.wait.untilJqueryIsDone(driver);
     	
-    	 Reporter.addStepLog("Navigated to Home Page from POM");
+    	 //Reporter.addStepLog("Navigated to Home Page from POM");
     	
     }
 	

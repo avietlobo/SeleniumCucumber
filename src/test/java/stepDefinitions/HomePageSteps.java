@@ -1,28 +1,35 @@
 package stepDefinitions;
 
+
 import org.openqa.selenium.WebDriver;
 
 import com.cucumber.listener.Reporter;
 
 import cucumber.TestContext;
 import cucumber.api.java.en.Given;
-import dataProviders.ConfigFileReader;
+import cucumber.api.java.en.Then;
+
 import managers.PageObjectManager;
 import managers.WebDriverManager;
+import pages.CartPage;
 import pages.HomePage;
 
 public class HomePageSteps {
 
-	TestContext testContext;
+	//TestContext testContext;
 	HomePage homePage;
-	/*
-	 * WebDriverManager webDriverManager; PageObjectManager pageObjectManager;
-	 * WebDriver driver;
-	 */
+	CartPage cartPage;
+	
+	  WebDriverManager webDriverManager; 
+	  PageObjectManager pageObjectManager;
+	  WebDriver driver;
+	  TestContext testContext;
+	 
 	
 	public HomePageSteps(TestContext context) {
 		testContext = context;
 		homePage = testContext.getPageObjectManager().getHomePage();
+		
 	}
 	
 	@Given("^user is on Home page$")
@@ -30,15 +37,16 @@ public class HomePageSteps {
 	    // Write code here that turns the phrase above into concrete actions
 		
 		
-		/*
-		 * webDriverManager = new WebDriverManager();
-		 * 
-		 * driver = webDriverManager.getDriver(); pageObjectManager = new
-		 * PageObjectManager(driver); homePage = pageObjectManager.getHomePage();
-		 */
+		
+		  //webDriverManager = new WebDriverManager();
+		  
+		  //driver = webDriverManager.getDriver(); 
+		  //pageObjectManager = new PageObjectManager(driver); 
+		  //homePage = pageObjectManager.getHomePage();
+		 
 		 homePage.navigateTo_HomePage(); 
 		 
-		 Reporter.addScenarioLog("Navigated to Home Page");
+		
 			
 	}
 	
@@ -47,7 +55,7 @@ public class HomePageSteps {
 	public void i_click_on_close_popup_window() throws Throwable {
 		
 		 homePage.closePopUpWindow();
-		 Reporter.addScenarioLog("Closed the pop up window");
+		
 	}
 	
 	
@@ -56,7 +64,13 @@ public class HomePageSteps {
 	    // Write code here that turns the phrase above into concrete actions
 		homePage.clickOn_Cart();
 		
-		 Reporter.addScenarioLog("Clicked on cart");
+		
+		 
+		
 	}
+	
+	
+	
+	
 	
 }

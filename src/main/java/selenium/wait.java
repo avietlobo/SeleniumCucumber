@@ -9,20 +9,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import managers.FileReaderManager;
 
+
+
 public class wait {
 
 	public static void untilJqueryIsDone(WebDriver driver){
 		untilJqueryIsDone(driver, FileReaderManager.getInstance().getConfigReader().getImplicitlyWait());
 	}
 
-	public static void untilJqueryIsDone(WebDriver driver, Long timeoutInSeconds){
-		until(driver, (d) ->
-			{
-			Boolean isJqueryCallDone = (Boolean)((JavascriptExecutor) driver).executeScript("return jQuery.active==0");
-			if (!isJqueryCallDone) System.out.println("JQuery call is in Progress");
-			return isJqueryCallDone;
-			}, timeoutInSeconds);
-	}
+	
+	  public static void untilJqueryIsDone(WebDriver driver, Long
+	  timeoutInSeconds){ until(driver, (d) -> { Boolean isJqueryCallDone =
+	  (Boolean)((JavascriptExecutor)
+	  driver).executeScript("return jQuery.active==0"); if (!isJqueryCallDone)
+	  System.out.println("JQuery call is in Progress"); return isJqueryCallDone; },
+	  timeoutInSeconds); }
+	 
 	
 	public static void untilPageLoadComplete(WebDriver driver) {
 		untilPageLoadComplete(driver, FileReaderManager.getInstance().getConfigReader().getImplicitlyWait());

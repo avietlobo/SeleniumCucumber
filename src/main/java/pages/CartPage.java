@@ -29,7 +29,7 @@ public class CartPage{
 	public void verifyTitle()
     {
   
-   
+   System.out.println("CART PAGE");
   
     
     }
